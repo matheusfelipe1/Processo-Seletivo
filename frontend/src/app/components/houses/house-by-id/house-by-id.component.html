@@ -1,0 +1,60 @@
+<mat-card class="houses mat-elevation-z8">
+  <mat-toolbar class="toolbar">
+    Residencial {{ housesById.residencial }}
+  </mat-toolbar>
+  <mat-card-subtitle class="description">
+    <strong>Descrição:</strong> {{ housesById.descricao }}
+  </mat-card-subtitle>
+  <mat-toolbar class="price">
+    Preço Venda: {{ housesById.preco }} R$
+  </mat-toolbar>
+  <mat-toolbar class="price">
+    Preço Aluguel: {{ housesById.preco_aluguel }} R$
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <mat-card-title class="dados">Dados da Residencia</mat-card-title>
+  <mat-card-subtitle>
+    <strong> Endereço: </strong> {{ housesById.endereco }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Bairro: </strong> {{ housesById.bairro }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Cidade: </strong> {{ housesById.cidade }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Estado: </strong> {{ housesById.estado }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> CEP: </strong> {{ housesById.cep }}</mat-card-subtitle
+  >
+  <mat-divider></mat-divider>
+  <mat-card-title class="dados">Empresa Brunsker</mat-card-title>
+  <mat-card-subtitle>
+    <strong> Endereço: </strong>
+    {{ housesById.endereco_empresa }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Bairro: </strong>
+    {{ housesById.bairro_empresa }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Cidade: </strong>
+    {{ housesById.cidade_empresa }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Estado: </strong> {{ housesById.uf_empresa }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> CEP: </strong> {{ housesById.cep_empresa }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> Contato: </strong> {{ housesById.contato }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> E-mail: </strong> {{ housesById.email }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <strong> CNPJ: </strong> {{ housesById.cnpj }}</mat-card-subtitle
+  >
+</mat-card>

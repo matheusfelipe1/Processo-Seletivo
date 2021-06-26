@@ -1,0 +1,21 @@
+export interface House {
+  id?: Number,
+  cep: string,
+  endereco: string,
+  cidade: string,
+  estado: string,
+  residencial: string,
+  descricao: string,
+  endereco_empresa: string,
+  uf_empresa: string,
+  bairro_empresa: string,
+  cidade_empresa: string,
+  cep_empresa: string,
+  bairro: string,
+  complemento: string,
+  preco: string,
+  preco_aluguel: string,
+  cnpj: string,
+  contato: string,
+  email: string
+}

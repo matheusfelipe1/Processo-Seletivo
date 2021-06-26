@@ -1,0 +1,30 @@
+.houses {
+
+  width: 75%;
+  position: absolute;
+  left: 10%;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.description {
+
+  width: 75%;
+}
+
+.toolbar {
+
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.dados {
+
+  padding: 25px 0px;
+}
+
+.price {
+
+  width: 30%;
+  margin-bottom: 20px;
+}
