@@ -14,7 +14,7 @@ const routes: Routes = [
     component: HouseByIdComponent
   },
   {
-    path: "cadastro",
+    path: "register",
     component: HousesRegisterComponent
   },
 ];

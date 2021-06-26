@@ -14,15 +14,15 @@ export class HousesTableComponent implements OnInit {
 
   houses: House[] = [];
 
-  columns = ['ID', 'Residencial', 'Empresa', 'Preço', 'Ver'];
+  columns = ['ID', 'Residencial', 'Empresa', 'Preço de Venda', 'Preço de Aluguel', 'Ver'];
 
   ngOnInit(): void {
     this.HousesService.getHouse().subscribe(data => {
       this.houses = data
     })
   }
-  navegarParaCadastrar(): void {
-    this.route.navigate(['cadastro'])
+  navigateToRegister(): void {
+    this.route.navigate(['register'])
   }
 
 }
