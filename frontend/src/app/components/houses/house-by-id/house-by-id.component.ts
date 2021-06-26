@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HousesService } from 'src/app/houses.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { HousesService } from 'src/app/houses.service';
 export class HouseByIdComponent implements OnInit {
   constructor(
     private HousesService: HousesService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private route: Router
   ) {}
 
   housesById = {
@@ -42,5 +43,11 @@ export class HouseByIdComponent implements OnInit {
       const houses = Object(data);
       this.housesById = houses;
     });
+  }
+  navigateToUpdate(id: string): void {
+    this.route.navigate([`update/${id}`]);
+  }
+  back(): void {
+    this.route.navigate(['/']);
   }
 }

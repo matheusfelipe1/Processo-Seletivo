@@ -1,17 +1,14 @@
 .header {
-
   height: 12%;
   background-color: brown;
 }
 
 .img {
-
   height: 60px;
   padding: 15px;
 }
 
 .title {
-
   color: #fff;
   position: relative;
   left: 18%;

@@ -1,12 +1,10 @@
 form {
-
   display: flex;
   flex-direction: column;
   color: #000;
 }
 
 .form {
-
   width: 75%;
   position: absolute;
   left: 10%;
@@ -14,57 +12,47 @@ form {
 }
 
 .title {
-
   padding: 20px 0px;
 }
 
 div {
-
   display: flex;
   flex-direction: row;
 }
 
 .preco_aluguel {
-
   margin-left: 30px;
 }
 
 .endereco {
-
   width: 80%;
   margin-left: 20px;
 }
 
 .cep {
-
   width: 20%;
 }
 
 .bairro {
-
   width: 38%;
 }
 
 .cidade {
-
   width: 38%;
   margin-left: 25px;
 }
 
 .estado {
-
   width: 10%;
   margin-left: 25px;
 }
 
 .button-save {
-
   background-color: midnightblue;
   color: #fff;
 }
 
 .button-cancel {
-
   background-color: #ccc;
   color: #000;
   margin-left: 17px;

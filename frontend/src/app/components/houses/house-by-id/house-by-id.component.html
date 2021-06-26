@@ -57,4 +57,12 @@
   <mat-card-subtitle>
     <strong> CNPJ: </strong> {{ housesById.cnpj }}</mat-card-subtitle
   >
+  <button
+    class="button-alter"
+    mat-raised-button
+    (click)="navigateToUpdate(housesById.id)"
+  >
+    Alterar dados
+  </button>
+  <button class="button-back" mat-raised-button (click)="back()">Voltar</button>
 </mat-card>
