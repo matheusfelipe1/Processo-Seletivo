@@ -7,22 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/views/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import { ContentComponent } from './components/views/content/content.component'
+import { ContentComponent } from './components/views/content/content.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { HousesTableComponent } from './components/houses/houses-table/houses-table.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { HouseByIdComponent } from './components/houses/house-by-id/house-by-id.component';
-import {  HousesRegisterComponent } from './components/houses/houses-register/houses-register.component';
+import { HousesRegisterComponent } from './components/houses/houses-register/houses-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms'
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { HousesUpdateComponent } from './components/houses/houses-update/houses-update.component';
+import { HousesDeleteComponent } from './components/houses/houses-delete/houses-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { HousesUpdateComponent } from './components/houses/houses-update/houses-
     HousesTableComponent,
     HouseByIdComponent,
     HousesRegisterComponent,
-    HousesUpdateComponent
+    HousesUpdateComponent,
+    HousesDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,9 +51,9 @@ import { HousesUpdateComponent } from './components/houses/houses-update/houses-
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

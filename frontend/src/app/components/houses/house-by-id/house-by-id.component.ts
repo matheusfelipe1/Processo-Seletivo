@@ -45,9 +45,11 @@ export class HouseByIdComponent implements OnInit {
     });
   }
   navigateToUpdate(id: string): void {
-    this.route.navigate([`update/${id}`]);
+    const url = `update/${id}`;
+    this.route.navigate([url]);
   }
-  back(): void {
-    this.route.navigate(['/']);
+  navigateToDelete(id: string): void {
+    const url = `delete/${id}`;
+    this.route.navigate([url]);
   }
 }

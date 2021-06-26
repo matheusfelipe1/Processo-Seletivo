@@ -39,8 +39,14 @@ export class HousesService {
     const url = `${this.baseApiUrl}/api/houses/create`
     return this.http.post<House>(url, houses)
   }
+
   putHouses(houses: object, id: string): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/edit/${id}`
     return this.http.put<House>(url, houses)
+  }
+
+  deleteHouses(id: string): Observable<House> {
+    const url = `${this.baseApiUrl}/api/houses/delete/${id}`
+    return this.http.delete<House>(url)
   }
 }
