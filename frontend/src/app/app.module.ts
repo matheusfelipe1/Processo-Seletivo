@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { HousesUpdateComponent } from './components/houses/houses-update/houses-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import {MatSelectModule} from '@angular/material/select';
     ContentComponent,
     HousesTableComponent,
     HouseByIdComponent,
-    HousesRegisterComponent
+    HousesRegisterComponent,
+    HousesUpdateComponent
   ],
   imports: [
     BrowserModule,

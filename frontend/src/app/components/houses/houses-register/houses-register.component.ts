@@ -9,36 +9,50 @@ interface UF {
 }
 const error: Record<string, string> = {
   residencial: 'Nome Residencial',
+  descricao: 'Descrição',
+  preco: 'Preço de venda',
+  preco_aluguel: 'Preço de aluguel',
+  cep: 'CEP residencial',
+  endereco: 'Endereço do imóvel',
+  bairro: 'Bairro do imóvel',
+  cidade: 'Cidade do imóvel',
+  estado: 'Estado do imóvel',
+  cep_empresa: 'CEP da empresa',
+  endereco_empresa: 'Endereço da empresa',
+  bairro_empresa: 'Bairro da empresa',
+  cidade_empresa: 'Cidade da empresa',
+  uf_empresa: 'Estado da empresa',
+  contato: 'Contato da empresa',
+  email: 'E-mail da empresa',
+  cnpj: 'CNPJ da empresa',
 };
 
 @Component({
   selector: 'app-houses-register',
   templateUrl: './houses-register.component.html',
-  styleUrls: ['./houses-register.component.css']
+  styleUrls: ['./houses-register.component.css'],
 })
 export class HousesRegisterComponent implements OnInit {
-
-
   constructor(private HousesService: HousesService, private route: Router) {}
 
   housesObjeto = {
     residencial: '',
+    descricao: '',
+    preco: '',
+    preco_aluguel: '',
+    cep: '',
     endereco: '',
+    bairro: '',
     cidade: '',
     estado: '',
-    bairro: '',
-    preco: '',
+    cep_empresa: '',
     endereco_empresa: '',
-    cep: '',
-    cnpj: '',
-    contato: '',
-    email: '',
-    descricao: '',
-    uf_empresa: '',
     bairro_empresa: '',
     cidade_empresa: '',
-    cep_empresa: '',
-    preco_aluguel: '',
+    uf_empresa: '',
+    contato: '',
+    email: '',
+    cnpj: '',
   };
 
   ngOnInit(): void {}
@@ -97,6 +111,4 @@ export class HousesRegisterComponent implements OnInit {
   cancelOperation(): void {
     this.route.navigate(['/']);
   }
-
-
 }
