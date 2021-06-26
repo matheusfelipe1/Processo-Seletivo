@@ -12,11 +12,13 @@ const error: Record<string, string> = {
 };
 
 @Component({
-  selector: 'app-houses-cadastro',
-  templateUrl: './houses-cadastro.component.html',
-  styleUrls: ['./houses-cadastro.component.css'],
+  selector: 'app-houses-register',
+  templateUrl: './houses-register.component.html',
+  styleUrls: ['./houses-register.component.css']
 })
-export class HousesCadastroComponent implements OnInit {
+export class HousesRegisterComponent implements OnInit {
+
+
   constructor(private HousesService: HousesService, private route: Router) {}
 
   housesObjeto = {
@@ -71,15 +73,15 @@ export class HousesCadastroComponent implements OnInit {
     { value: 'DF', viewValue: 'DF' },
   ];
 
-  descricao = new FormControl();
+  description = new FormControl();
   onDescriptionChange() {
-    this.housesObjeto.descricao = this.descricao.value;
+    this.housesObjeto.descricao = this.description.value;
   }
 
-  cadastrarHouses(): void {
+  registerHouses(): void {
     try {
       Object.entries(this.housesObjeto).forEach(([key, value]) => {
-        this.HousesService.verificaValoresVazios(value, error[key]);
+        this.HousesService.verifyNullValues(value, error[key]);
       });
       this.HousesService.postHouses(this.housesObjeto).subscribe(() => {
         this.HousesService.message(
@@ -87,12 +89,14 @@ export class HousesCadastroComponent implements OnInit {
         );
         this.route.navigate(['/']);
       });
-    } catch (erro) {
-      throw erro;
+    } catch (error) {
+      throw error;
     }
   }
 
-  cancelarOperacao(): void {
+  cancelOperation(): void {
     this.route.navigate(['/']);
   }
+
+
 }

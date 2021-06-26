@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HouseByIdComponent } from './components/houses/house-by-id/house-by-id.component';
-import { HousesCadastroComponent } from './components/houses/houses-cadastro/houses-cadastro.component';
+import { HousesRegisterComponent } from './components/houses/houses-register/houses-register.component';
 import { HousesTableComponent } from './components/houses/houses-table/houses-table.component';
 
 const routes: Routes = [
@@ -15,8 +15,8 @@ const routes: Routes = [
   },
   {
     path: "cadastro",
-    component: HousesCadastroComponent
-  }
+    component: HousesRegisterComponent
+  },
 ];
 
 @NgModule({

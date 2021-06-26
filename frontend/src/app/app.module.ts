@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule} from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { HouseByIdComponent } from './components/houses/house-by-id/house-by-id.component';
-import { HousesCadastroComponent } from './components/houses/houses-cadastro/houses-cadastro.component';
+import {  HousesRegisterComponent } from './components/houses/houses-register/houses-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms'
@@ -29,7 +29,7 @@ import {MatSelectModule} from '@angular/material/select';
     ContentComponent,
     HousesTableComponent,
     HouseByIdComponent,
-    HousesCadastroComponent
+    HousesRegisterComponent
   ],
   imports: [
     BrowserModule,

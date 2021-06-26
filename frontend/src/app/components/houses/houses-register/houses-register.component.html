@@ -17,7 +17,7 @@
         cols="92"
         rows="8"
         placeholder="Descrição"
-        [formControl]="descricao"
+        [formControl]="description"
         (change)="onDescriptionChange()"
       >
       </textarea>
@@ -182,10 +182,10 @@
       />
     </mat-form-field>
   </form>
-  <button class="button-save" mat-raised-button (click)="cadastrarHouses()">
+  <button class="button-save" mat-raised-button (click)="registerHouses()">
     Salvar
   </button>
-  <button class="button-cancel" mat-raised-button (click)="cancelarOperacao()">
+  <button class="button-cancel" mat-raised-button (click)="cancelOperation()">
     Cancelar
   </button>
 </mat-card>

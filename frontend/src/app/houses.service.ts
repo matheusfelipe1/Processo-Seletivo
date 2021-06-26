@@ -21,7 +21,7 @@ export class HousesService {
     })
   }
 
-  verificaValoresVazios(data: string, value: string): void {
+  verifyNullValues(data: string, value: string): void {
     if(data.length === 0 && !data.trim()) throw this.message(`${value} não pode ser nulo!`)
   }
 
