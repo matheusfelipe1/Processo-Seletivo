@@ -6,23 +6,29 @@ import { House } from '../../house.model';
 @Component({
   selector: 'app-houses-table',
   templateUrl: './houses-table.component.html',
-  styleUrls: ['./houses-table.component.css']
+  styleUrls: ['./houses-table.component.css'],
 })
 export class HousesTableComponent implements OnInit {
-
-  constructor(private HousesService: HousesService, private route: Router) { }
+  constructor(private HousesService: HousesService, private route: Router) {}
 
   houses: House[] = [];
 
-  columns = ['ID', 'Residencial', 'Empresa', 'Preço de Venda', 'Preço de Aluguel', 'Ver'];
+  columns = [
+    'ID',
+    'Residencial',
+    'Empresa',
+    'Preço de Venda',
+    'Preço de Aluguel',
+    'Ver',
+  ];
 
   ngOnInit(): void {
-    this.HousesService.getHouse().subscribe(data => {
-      this.houses = data
-    })
+    //obter os usuários assim que for entrado no componente do html
+    this.HousesService.getHouse().subscribe((data) => {
+      this.houses = data;
+    });
   }
   navigateToRegister(): void {
-    this.route.navigate(['register'])
+    this.route.navigate(['register']);
   }
-
 }

@@ -8,29 +8,33 @@ import { HousesUpdateComponent } from './components/houses/houses-update/houses-
 
 const routes: Routes = [
   {
-    path: "",
-    component: HousesTableComponent
+    path: '',
+    component: HousesTableComponent,
   },
   {
-    path: "houses/:id",
-    component: HouseByIdComponent
+    path: 'houses/:id',
+    component: HouseByIdComponent,
   },
   {
-    path: "register",
-    component: HousesRegisterComponent
+    path: 'register',
+    component: HousesRegisterComponent,
   },
   {
-    path: "update/:id",
-    component: HousesUpdateComponent
+    path: 'update/:id',
+    component: HousesUpdateComponent,
   },
   {
     path: 'delete/:id',
-    component: HousesDeleteComponent
-  }
+    component: HousesDeleteComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '/',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
