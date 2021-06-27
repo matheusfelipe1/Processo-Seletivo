@@ -24,22 +24,22 @@ export class HousesService {
   verifyNullValues(data: string, value: string): void {
     if (data.length === 0 && !data.trim())
       throw this.message(`${value} não pode ser nulo!`);
-    //este algoritmo recebe um dado e um valor, se o dado for nulo ele retorna o valor dizendo que é nulo
+    // este algoritmo recebe um dado e um valor, se o dado for nulo ele retorna o valor dizendo que é nulo
   }
 
   getHouse(): Observable<House[]> {
     const url = `${this.baseApiUrl}/api/houses`;
-    return this.http.get<House[]>(url); //função para obter os dados da url
+    return this.http.get<House[]>(url); // função para obter os dados da url
   }
 
   getHouseById(id: string): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/${id}`;
-    return this.http.get<House>(url); //função para obter os dados da url pelo ID
+    return this.http.get<House>(url); // função para obter os dados da url pelo ID
   }
 
   postHouses(houses: object): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/create`;
-    return this.http.post<House>(url, houses); //função para inserir os dados dentro do banco através da url
+    return this.http.post<House>(url, houses); //  para inserir os dados dentro do banco através da url
   }
 
   putHouses(houses: object, id: string): Observable<House> {
@@ -49,6 +49,6 @@ export class HousesService {
 
   deleteHouses(id: string): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/delete/${id}`;
-    return this.http.delete<House>(url); //função para excluir os dados dentro do banco através da url
+    return this.http.delete<House>(url); // função para excluir os dados dentro do banco através da url
   }
 }

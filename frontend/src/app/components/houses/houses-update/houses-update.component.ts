@@ -110,7 +110,7 @@ export class HousesUpdateComponent implements OnInit {
     try {
       Object.entries(this.housesObjectToUpdate).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
-        // esse algoritmo entra dentro objeto e verifica se suas chaves estão nulas, se sim, quais
+        //esse algoritmo entra dentro objeto e verifica se suas chaves estão nulas, se sim, quais
       });
       this.showSpinner = true; //para fazer com que o spinner seja renderizado no html
       this.HousesService.putHouses(this.housesObjectToUpdate, id).subscribe(

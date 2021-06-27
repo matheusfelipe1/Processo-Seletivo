@@ -8,6 +8,10 @@ import { HousesUpdateComponent } from './components/houses/houses-update/houses-
 
 const routes: Routes = [
   {
+    path: '**',
+    redirectTo: '/',
+  },
+  {
     path: '',
     component: HousesTableComponent,
   },
@@ -27,10 +31,7 @@ const routes: Routes = [
     path: 'delete/:id',
     component: HousesDeleteComponent,
   },
-  {
-    path: '**',
-    redirectTo: '/',
-  },
+
 ];
 
 @NgModule({
