@@ -7,7 +7,7 @@
 # Laravel Installer 4.2.6
 
 # cd backend/ (entre na pasta backend)
-# composer install (instale as dependências)
+# composer install & composer update (instale as dependências)
 
 # no arquivo ".env.example" renomeie para ".env" (renomeie o arquivo)
 
