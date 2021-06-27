@@ -67,3 +67,22 @@ div {
   margin-left: 10px;
   margin-top: 8px;
 }
+
+@media (min-width: 240px) and (max-width: 600px) {
+  .form {
+  width: 500px;
+  position: absolute;
+  left: 10%;
+  margin-top: 25px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1040px) {
+  .form {
+  width: 830px;
+  position: absolute;
+  left: 10%;
+  margin-top: 25px;
+  }
+}
+

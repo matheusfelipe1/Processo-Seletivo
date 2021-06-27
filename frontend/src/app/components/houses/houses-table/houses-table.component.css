@@ -24,3 +24,64 @@
 .button:hover {
   background-color: darkslateblue;
 }
+
+@media (min-width: 280px) and (max-width: 540px) {
+  .id {
+    display: none;
+  }
+  .empresa {
+    display: none;
+  }
+  .table {
+    width: 540px;
+    position: absolute;
+    left: 3%;
+  }
+  th {
+    font-size: 16px;
+    position: relative;
+    left: 3%;
+  }
+  td {
+    font-size: 13px;
+    position: relative;
+    left: 3%;
+  }
+
+  .button {
+    background-color: crimson;
+    color: #fff;
+    position: relative;
+    left: 3%;
+    margin-top: 15px;
+  }
+
+}
+
+
+@media (min-width: 760px) and (max-width: 1040px) {
+  .table {
+    width: 980px;
+    position: absolute;
+    left: 2%
+  }
+
+  th {
+    font-size: 20px;
+    position: relative;
+    left: 3%;
+  }
+  td {
+    font-size: 19px;
+    position: relative;
+    left: 3%;
+  }
+
+  .button {
+    background-color: crimson;
+    color: #fff;
+    position: relative;
+    left: 3%;
+    margin-top: 15px;
+  }
+}

@@ -33,3 +33,23 @@
   background-color: #ccc;
   margin-left: 25px;
 }
+
+@media (min-width: 250px) and (max-width: 600px) {
+  .houses {
+    width: 500px;
+
+  }
+
+  .price {
+    width: 400px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1040px) {
+  .houses {
+    width: 800px;
+  }
+  .price {
+    width: 400px;
+  }
+}
