@@ -10,11 +10,21 @@
 }
 
 .button-delete {
-  background-color: red;
+  background-color: rgb(255, 153, 0);
   color: #fff;
 }
 
 .button-cancel {
   background-color: #ccc;
   margin-left: 20px;
+}
+
+.spinner-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.spinner {
+  margin-left: 10px;
+  margin-top: 8px;
 }

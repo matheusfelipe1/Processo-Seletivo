@@ -92,14 +92,17 @@ export class HousesRegisterComponent implements OnInit {
     this.housesObject.descricao = this.description.value;
   }
 
+  showSpinner = false;
+
   registerHouses(): void {
     try {
       Object.entries(this.housesObject).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
       });
+      this.showSpinner = true;
       this.HousesService.postHouses(this.housesObject).subscribe(() => {
         this.HousesService.message(
-          `Imóvel Reseidencial ${this.housesObject.residencial} cadastrado com sucesso!`
+          `Imóvel Residencial ${this.housesObject.residencial} cadastrado com sucesso!`
         );
         this.route.navigate(['/']);
       });

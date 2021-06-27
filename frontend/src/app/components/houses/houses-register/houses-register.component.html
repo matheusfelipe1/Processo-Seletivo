@@ -184,7 +184,14 @@
     </mat-form-field>
   </form>
   <button class="button-save" mat-raised-button (click)="registerHouses()">
-    Salvar
+    <div class="spinner-text">
+      Salvar
+      <mat-spinner
+        class="spinner"
+        *ngIf="showSpinner"
+        diameter="23"
+      ></mat-spinner>
+    </div>
   </button>
   <button class="button-cancel" mat-raised-button (click)="cancelOperation()">
     Cancelar

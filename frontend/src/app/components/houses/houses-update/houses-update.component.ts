@@ -64,7 +64,6 @@ export class HousesUpdateComponent implements OnInit {
     this.HousesService.getHouseById(id).subscribe((data) => {
       this.housesObjectToUpdate = data;
       console.log(this.housesObjectToUpdate.descricao);
-
     });
   }
 
@@ -103,6 +102,8 @@ export class HousesUpdateComponent implements OnInit {
     this.housesObjectToUpdate.descricao = this.description.value;
   }
 
+  showSpinner = false;
+
   updateHouses(): void {
     const id = this.router.snapshot.paramMap.get('id');
     if (!id) return;
@@ -110,13 +111,15 @@ export class HousesUpdateComponent implements OnInit {
       Object.entries(this.housesObjectToUpdate).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
       });
-
-      this.HousesService.putHouses(this.housesObjectToUpdate, id).subscribe(() => {
-        this.HousesService.message(
-          `Imóvel Reseidencial ${this.housesObjectToUpdate.residencial} alterado com sucesso!`
-        );
-        this.route.navigate([`houses/${id}`]);
-      });
+      this.showSpinner = true;
+      this.HousesService.putHouses(this.housesObjectToUpdate, id).subscribe(
+        () => {
+          this.HousesService.message(
+            `Imóvel Residencial ${this.housesObjectToUpdate.residencial} alterado com sucesso!`
+          );
+          this.route.navigate([`houses/${id}`]);
+        }
+      );
     } catch (error) {
       throw error;
     }

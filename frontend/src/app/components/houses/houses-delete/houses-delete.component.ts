@@ -33,10 +33,14 @@ export class HousesDeleteComponent implements OnInit {
     });
   }
 
+  showSpinner = false;
+
   deleteHouse(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) return;
+    this.showSpinner = true;
     this.HousesService.deleteHouses(id).subscribe(() => {
+      this.HousesService.message('Imóvel residencial excluído com sucesso!');
       this.router.navigate(['/']);
     });
   }

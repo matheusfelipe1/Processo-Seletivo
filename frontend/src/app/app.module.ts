@@ -24,6 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { HousesUpdateComponent } from './components/houses/houses-update/houses-update.component';
 import { HousesDeleteComponent } from './components/houses/houses-delete/houses-delete.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { HousesDeleteComponent } from './components/houses/houses-delete/houses-
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
