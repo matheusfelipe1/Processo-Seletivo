@@ -7,7 +7,10 @@ import { HousesTableComponent } from './components/houses/houses-table/houses-ta
 import { HousesUpdateComponent } from './components/houses/houses-update/houses-update.component';
 
 const routes: Routes = [
-
+  {
+    path: "**",
+    redirectTo: "/"
+  },
   {
     path: '',
     component: HousesTableComponent,
@@ -28,10 +31,6 @@ const routes: Routes = [
     path: 'delete/:id',
     component: HousesDeleteComponent,
   },
-  {
-    path: "**",
-    redirectTo: "/"
-  }
 
 ];
 

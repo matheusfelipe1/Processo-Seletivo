@@ -42,7 +42,7 @@ export class HouseByIdComponent implements OnInit {
     this.HousesService.getHouseById(getId).subscribe((data) => {
       const houses = Object(data);
       this.housesById = houses;
-      // neste algoritmo estou buscando o id na url e enviando como parametro para buscar os dados deste ID
+      //neste algoritmo estou buscando o id na url e enviando como parametro para buscar os dados deste ID
     });
   }
   navigateToUpdate(id: string): void {

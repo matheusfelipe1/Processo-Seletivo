@@ -98,7 +98,7 @@ export class HousesRegisterComponent implements OnInit {
     try {
       Object.entries(this.housesObject).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
-        //esse algoritmo entra dentro objeto e verifica se suas chaves estão nulas, se sim, quais
+        // esse algoritmo entra dentro objeto e verifica se suas chaves estão nulas, se sim, quais
       });
       this.showSpinner = true;
       this.HousesService.postHouses(this.housesObject).subscribe(() => {

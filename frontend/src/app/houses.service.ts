@@ -18,7 +18,7 @@ export class HousesService {
       horizontalPosition: 'right',
       verticalPosition: 'top',
     });
-    //para exibir mensagens de sucesso, erro, atualização e remoção
+    // para exibir mensagens de sucesso, erro, atualização e remoção
   }
 
   verifyNullValues(data: string, value: string): void {
@@ -29,17 +29,17 @@ export class HousesService {
 
   getHouse(): Observable<House[]> {
     const url = `${this.baseApiUrl}/api/houses`;
-    return this.http.get<House[]>(url); // função para obter os dados da url
+    return this.http.get<House[]>(url); //  função para obter os dados da url
   }
 
   getHouseById(id: string): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/${id}`;
-    return this.http.get<House>(url); // função para obter os dados da url pelo ID
+    return this.http.get<House>(url); //  função para obter os dados da url pelo ID
   }
 
   postHouses(houses: object): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/create`;
-    return this.http.post<House>(url, houses); //  para inserir os dados dentro do banco através da url
+    return this.http.post<House>(url, houses); // para inserir os dados dentro do banco através da url
   }
 
   putHouses(houses: object, id: string): Observable<House> {
@@ -49,6 +49,6 @@ export class HousesService {
 
   deleteHouses(id: string): Observable<House> {
     const url = `${this.baseApiUrl}/api/houses/delete/${id}`;
-    return this.http.delete<House>(url); // função para excluir os dados dentro do banco através da url
+    return this.http.delete<House>(url); //função para excluir os dados dentro do banco através da url
   }
 }

@@ -42,6 +42,7 @@ export class HousesDeleteComponent implements OnInit {
     this.HousesService.deleteHouses(id).subscribe(() => {
       this.HousesService.message('Imóvel residencial excluído com sucesso!');
       this.router.navigate(['/']);
+      // algoritmo que delete e redireciona a tela inicial
     });
   }
 

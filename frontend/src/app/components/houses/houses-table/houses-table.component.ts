@@ -23,7 +23,7 @@ export class HousesTableComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    // obter os usuários assim que for entrado no componente do html
+    //  obter os usuários assim que for entrado no componente do html
     this.HousesService.getHouse().subscribe((data) => {
       this.houses = data;
     });
