@@ -1,1 +1,30 @@
-<p>houses-delete works!</p>
+<mat-card class="card-delete mat-elevation-z8">
+  <mat-toolbar>
+    Realmente deseja excluir o imóvel
+    {{ housesReadyToDelete.residencial }} ?</mat-toolbar
+  >
+  <mat-card-title class="title"> Dados do imóvel </mat-card-title>
+  <mat-card-subtitle>
+    <strong> Descrição: </strong> {{ housesReadyToDelete.descricao }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Preço da venda: </strong> {{ housesReadyToDelete.preco }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Preço do aluguel: </strong> {{ housesReadyToDelete.preco_aluguel }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Endereço do imóvel: </strong> {{ housesReadyToDelete.endereco }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Bairro do imóvel: </strong> {{ housesReadyToDelete.bairro }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Cidade: </strong> {{ housesReadyToDelete.cidade }}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <strong> Estado: </strong> {{ housesReadyToDelete.estado }}
+  </mat-card-subtitle>
+  <button class="button-delete" mat-raised-button (click)="deleteHouse()">Excluir</button>
+  <button class="button-cancel" mat-raised-button (click)="cancelOperation()">Cancelar</button>
+</mat-card>

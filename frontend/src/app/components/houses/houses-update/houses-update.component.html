@@ -8,7 +8,7 @@
         matInput
         matNativeControl
         placeholder="Ex..: Residêncial Aurora"
-        [(ngModel)]="housesObjeto.residencial"
+        [(ngModel)]="housesObjectToUpdate.residencial"
         name="residencial"
       />
     </mat-form-field>
@@ -32,7 +32,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: 540.000,00 R$ a vista"
-          [(ngModel)]="housesObjeto.preco"
+          [(ngModel)]="housesObjectToUpdate.preco"
           name="preco"
         />
       </mat-form-field>
@@ -42,7 +42,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: 300,00 R$ por mês"
-          [(ngModel)]="housesObjeto.preco_aluguel"
+          [(ngModel)]="housesObjectToUpdate.preco_aluguel"
           name="preco_aluguel"
         />
       </mat-form-field>
@@ -55,7 +55,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: 32000-080"
-          [(ngModel)]="housesObjeto.cep"
+          [(ngModel)]="housesObjectToUpdate.cep"
           name="cep"
         />
       </mat-form-field>
@@ -65,7 +65,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: Av. Alterosa, 10"
-          [(ngModel)]="housesObjeto.endereco"
+          [(ngModel)]="housesObjectToUpdate.endereco"
           name="endereco"
         />
       </mat-form-field>
@@ -77,7 +77,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: Buritis"
-          [(ngModel)]="housesObjeto.bairro"
+          [(ngModel)]="housesObjectToUpdate.bairro"
           name="bairro"
         />
       </mat-form-field>
@@ -87,13 +87,13 @@
           matInput
           matNativeControl
           placeholder="Ex..: Belo Horizonte"
-          [(ngModel)]="housesObjeto.cidade"
+          [(ngModel)]="housesObjectToUpdate.cidade"
           name="cidade"
         />
       </mat-form-field>
       <mat-form-field class="estado">
         <mat-label> Estado: </mat-label>
-        <mat-select [(value)]="housesObjeto.estado">
+        <mat-select [(value)]="housesObjectToUpdate.estado">
           <mat-option *ngFor="let uf of ufs" [value]="uf.value">
             {{ uf.viewValue }}
           </mat-option>
@@ -108,7 +108,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: 12345-00"
-          [(ngModel)]="housesObjeto.cep_empresa"
+          [(ngModel)]="housesObjectToUpdate.cep_empresa"
           name="cep_empresa"
         />
       </mat-form-field>
@@ -118,7 +118,7 @@
           matInput
           matNativeControl
           placeholder="Ex..: Av. Paulista, 23 ..."
-          [(ngModel)]="housesObjeto.endereco_empresa"
+          [(ngModel)]="housesObjectToUpdate.endereco_empresa"
           name="endereco_empresa"
         />
       </mat-form-field>
@@ -130,7 +130,7 @@
           matInput
           matNativeControl
           placeholder="Informe o bairro da empresa"
-          [(ngModel)]="housesObjeto.bairro_empresa"
+          [(ngModel)]="housesObjectToUpdate.bairro_empresa"
           name="bairro_empresa"
         />
       </mat-form-field>
@@ -140,13 +140,13 @@
           matInput
           matNativeControl
           placeholder="Informa a cidade da empresa"
-          [(ngModel)]="housesObjeto.cidade_empresa"
+          [(ngModel)]="housesObjectToUpdate.cidade_empresa"
           name="cidade_empresa"
         />
       </mat-form-field>
       <mat-form-field class="estado">
         <mat-label> Estado: </mat-label>
-        <mat-select [(value)]="housesObjeto.uf_empresa">
+        <mat-select [(value)]="housesObjectToUpdate.uf_empresa">
           <mat-option *ngFor="let uf of ufs" [value]="uf.value">
             {{ uf.viewValue }}
           </mat-option>
@@ -160,7 +160,7 @@
         matNativeControl
         placeholder="Informe o telefone de
         contato da empresa. Ex..: 31 3351 - ..."
-        [(ngModel)]="housesObjeto.contato"
+        [(ngModel)]="housesObjectToUpdate.contato"
         name="contato"
       />
     </mat-form-field>
@@ -170,7 +170,7 @@
         matInput
         matNativeControl
         placeholder="Ex..: brunsker123@example.com"
-        [(ngModel)]="housesObjeto.email"
+        [(ngModel)]="housesObjectToUpdate.email"
         name="email"
       />
     </mat-form-field>
@@ -180,7 +180,7 @@
         matInput
         matNativeControl
         placeholder="Ex..: 1234679/000-00"
-        [(ngModel)]="housesObjeto.cnpj"
+        [(ngModel)]="housesObjectToUpdate.cnpj"
         name="cnpj"
       />
     </mat-form-field>

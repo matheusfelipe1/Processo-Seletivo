@@ -38,7 +38,7 @@ export class HousesUpdateComponent implements OnInit {
     private router: ActivatedRoute
   ) {}
 
-  housesObjeto = {
+  housesObjectToUpdate = {
     residencial: '',
     descricao: '',
     preco: '',
@@ -62,8 +62,8 @@ export class HousesUpdateComponent implements OnInit {
     const id = this.router.snapshot.paramMap.get('id');
     if (!id) return;
     this.HousesService.getHouseById(id).subscribe((data) => {
-      this.housesObjeto = data;
-      console.log(this.housesObjeto.descricao);
+      this.housesObjectToUpdate = data;
+      console.log(this.housesObjectToUpdate.descricao);
 
     });
   }
@@ -100,20 +100,20 @@ export class HousesUpdateComponent implements OnInit {
 
   description = new FormControl();
   onDescriptionChange() {
-    this.housesObjeto.descricao = this.description.value;
+    this.housesObjectToUpdate.descricao = this.description.value;
   }
 
   updateHouses(): void {
     const id = this.router.snapshot.paramMap.get('id');
     if (!id) return;
     try {
-      Object.entries(this.housesObjeto).forEach(([key, value]) => {
+      Object.entries(this.housesObjectToUpdate).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
       });
 
-      this.HousesService.putHouses(this.housesObjeto, id).subscribe(() => {
+      this.HousesService.putHouses(this.housesObjectToUpdate, id).subscribe(() => {
         this.HousesService.message(
-          `Imóvel Reseidencial ${this.housesObjeto.residencial} alterado com sucesso!`
+          `Imóvel Reseidencial ${this.housesObjectToUpdate.residencial} alterado com sucesso!`
         );
         this.route.navigate([`houses/${id}`]);
       });

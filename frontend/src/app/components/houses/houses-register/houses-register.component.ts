@@ -35,7 +35,7 @@ const error: Record<string, string> = {
 export class HousesRegisterComponent implements OnInit {
   constructor(private HousesService: HousesService, private route: Router) {}
 
-  housesObjeto = {
+  housesObject = {
     residencial: '',
     descricao: '',
     preco: '',
@@ -89,17 +89,17 @@ export class HousesRegisterComponent implements OnInit {
 
   description = new FormControl();
   onDescriptionChange() {
-    this.housesObjeto.descricao = this.description.value;
+    this.housesObject.descricao = this.description.value;
   }
 
   registerHouses(): void {
     try {
-      Object.entries(this.housesObjeto).forEach(([key, value]) => {
+      Object.entries(this.housesObject).forEach(([key, value]) => {
         this.HousesService.verifyNullValues(value, error[key]);
       });
-      this.HousesService.postHouses(this.housesObjeto).subscribe(() => {
+      this.HousesService.postHouses(this.housesObject).subscribe(() => {
         this.HousesService.message(
-          `Imóvel Reseidencial ${this.housesObjeto.residencial} cadastrado com sucesso!`
+          `Imóvel Reseidencial ${this.housesObject.residencial} cadastrado com sucesso!`
         );
         this.route.navigate(['/']);
       });

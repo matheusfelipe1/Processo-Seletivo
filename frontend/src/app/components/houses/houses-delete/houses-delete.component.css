@@ -1,0 +1,20 @@
+.card-delete {
+  width: 80%;
+  position: absolute;
+  left: 7%;
+  margin-top: 20px;
+}
+
+.title {
+  padding: 20px 0px;
+}
+
+.button-delete {
+  background-color: red;
+  color: #fff;
+}
+
+.button-cancel {
+  background-color: #ccc;
+  margin-left: 20px;
+}
